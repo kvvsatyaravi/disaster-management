@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>main</title>
+</head>
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/main.css' %}" type="text/css">
+
+<body bgcolor="grey">
+<div class="output">
+<center><label class="outputloc">Enter your location:{{data.yourlocation}}</label></center><br>
+<center><table border="2">
+	<tr>
+<th colspan="2"><center>Safeplaces</center></th></tr>
+<tr>
+<td><center>safepoint:</center></td><td><center>{{data.safeplacesname}}</center></td></tr>
+<tr><td><center>distance:</center></td><td><center>{{ data.safeplacesdistance }}</center></td></tr>
+<tr><td><center>contact:</center></td><td><center>{{ data.safeplacescontact }}</center></td></tr>
+<tr><td><center>capacity:</center></td></td><td><center>{{ data.safeplacescapacity }}</center></td></tr>
+
+<tr>
+<th colspan="2">Transport</th></tr>
+<tr>
+<td><center>name</:</td><td><center>{{ data.transportname }}</center></td></tr>
+<tr><td><center>type of:</center></td><td><center>{{data.transporttypeof }}</center></td></tr>
+<tr><td><center>contact</:</td><td><center>{{ data.transportcontact }}</center></td></tr>
+
+<tr><th colspan="2">Rescue team</th></tr>
+<tr><td><center>team members:</center></td><td><center>{{ data.rescueteamtype }}</center></td></tr>
+<tr><td><center>team type:</center></td><td><center>{{ data.rescueteammembers }}</center></td></tr>
+<tr><td><center>team contact:</center></td><td><center>{{ data.rescuecontact }}</center></td></tr>
+
+</table></center>
+</div>
+</body>
+</html>

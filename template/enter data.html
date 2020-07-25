@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>,enter new data</title>
+
+	{% load static %}
+<link rel="stylesheet"  href="{% static 'css/main.css' %}" type="text/css">
+	<link rel="stylesheet" type="text/css" href="sample.css">
+	</head>
+	<body bgcolor="grey">
+		<center><h1 class="titl"><b>Enter data</b></h1></center>
+	<form method="post">
+		{% csrf_token %}
+<div class="safeplace">
+	<h3 class="errordata">{{error}}</h3>
+<b class="bold">safe places:</b><br><br>
+<label class="enterlabel">location: </label><input type="text" placeholder="entered location " class="safe"  name="safeplace1" ></input><br><br>
+<label class="enterlabel">safepoint: </label><input type="text" placeholder="enter safepoint" class="safe" name="safeplace2" ><br><br>
+<label class="enterlabel">distance: </label><input type="text" placeholder="enter distance" class="safe" name="safeplace3"><br><br>
+<label class="enterlabel">capacity: </label><input type="text" placeholder="enter capacity" class="safe" name="safeplace4"><br><br>
+<label class="enterlabel">contact: </label><input type="text" placeholder="enter scontact" class="safe" name="safeplace5"><br><br>
+</div>
+<div class="transportfac">
+<b class="bold">Transport:</b><br><br>
+<label class="enterlabel">name: </label><input type="text" placeholder="enter transportname" class="transport" name="transport1"><br><br>
+<label class="enterlabel">type: </label><input type="text" placeholder="enter type" class="transport" name="transport2"><br><br>
+<label class="enterlabel">contact: </label><input type="text" placeholder="enter contact" class="transport" name="transport3"><br><br>
+</div>
+<div class="rescue">
+<b class="bold">rescue team:</b><br><br>
+<label class="enterlabel">teamtype: </label><input type="text" placeholder="enter teamtype" class="rescueforce" name="rescue1" ><br><br>
+<label class="enterlabel">members: </label><input type="text" placeholder="enter members" class="rescueforce" name="rescue2"><br><br>
+<label class="enterlabel">contact: </label><input type="text" placeholder="enter contact" class="rescueforce" name="rescue3">
+</div>
+<input type="submit" value="submit" name="" class="enterdata">
+</form>
+</body>
+</html>

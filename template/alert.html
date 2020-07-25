@@ -1,0 +1,15 @@
+<html>
+<head>
+ 	<title>send alerts</title>
+ 	{% load static %}
+ <link rel="stylesheet"  href="{% static 'css/main.css' %}" type="text/css">
+</head>
+<body bgcolor="grey">
+<form method="post">
+	{%csrf_token%}
+<label class="alertlabel">Enter alert/update alert</label>
+<input type="text" placeholder="enter alert " class="alerttext" name="alert_"><br><br>
+<input type="submit" class="alertbutton">
+</form>
+</body>
+</html>

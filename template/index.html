@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>disaster management</title>
+
+	{% load static %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"  href="{% static 'css/main.css' %}" type="text/css">
+	
+	</head>
+	<body bgcolor="grey">
+<div class="disaster">
+<h3 class="disastercenter">DISASTER MANAGEMENT</h3></div>
+<form method="post" action="">
+{% csrf_token %}
+	
+<h2 class="alertmain">ALERT:</h2><label class="alertindex">{{ alert.alertinfo }}</label><br>
+    <input type="submit" value="update" class="alertupdate" />
+</form>
+<br>
+
+<form method="POST" action="/main/">
+{% csrf_token %}
+<label class="labelindex">Enter your location:</label><br>
+<input type="text"  placeholder="enter location" name="input" class="input"></input>
+<button class="inputbutton">submit</button>
+</form>
+
+<label class="govlabel">govt offical</label><br>
+<img src="{% static 'css/govt.png' %}" class="govtmain"><br>
+<input type="button" onclick="location.href='{% url 'govtlogin' %}'" class="logingov" name="govtlogin" value="log in">
+
+<form method="POST" action="/admin/">
+{% csrf_token %}
+<label class="djangoadmin">admin</label><br>
+<img src="{% static 'css/govt.png' %}"  class="govindex"><br>
+<button class="govtlogin">login</button>
+</form>
+
+<div class="refabout">
+	<label class="refrence">Refrence Link</label><br>
+	<label class="link1">1st Link:</label> <a class="reflink" href="https://www.msc.fema.gov/portal/search#searchresultsanchor">https://msc.fema.gov/portal/search#searchresultsanchor</a>
+	<label class="link2" >2nd Link:</label> <a class="reflink1" href="https://www.Disaster-survival-resources.com">www.Disaster-survival-resources.com"</a>
+	<label class="link3">3rd Link:</label> <a class="reflink2" href="https://www.media.ifrc.org/ifrc">www.media.ifrc.org/ifrc</a>
+
+<label  class="about">About us</label>
+<label class="about1">admn name:hitler</label>
+<label class="about2">contact:123456</label>
+<label class="about3">email:hitler@gmail.com</label>
+<label class="about4">address:india</label>
+	
+</div>
+</body>
+</html>
