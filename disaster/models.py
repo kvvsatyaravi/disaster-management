@@ -1,10 +1,11 @@
 from django.db import models
 
+
 class main(models.Model):
 #safeplaces
     yourlocation = models.CharField(max_length=200,default='null')
     safeplacesname = models.CharField(max_length=200,default='kkd')
-    safeplacesdistance = models.IntegerField(default='23')
+    safeplacesdistance = models.CharField(max_length=200,default='km')
     safeplacescapacity = models.IntegerField(default='200')
     safeplacescontact = models.IntegerField(default='5679')
 

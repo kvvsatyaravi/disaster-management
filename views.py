@@ -108,7 +108,8 @@ def adddata(request):
 			      rescueteamtype=rescue1,
 			      )
 			post.save()
-			return render(request,Template_data)
+			context = {'error':'successfully added data'}
+			return render(request,Template_data,context)
 
 def govtadmin(request):
 	
