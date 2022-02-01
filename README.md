@@ -24,6 +24,9 @@ design.
 # Languages
 - Python,Html,Css,JAvascript,Django(Web Framework)
 
+# Documentation
+[doc.pdf](https://github.com/kvvsatyaravi/disaster-management/blob/master/doc.pdf)
+
 # Requirements 
 1) first install python 3.+
 2) next install django 
